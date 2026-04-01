@@ -60,13 +60,13 @@ export default function Footer() {
               Atlanta, Georgia 30322
             </p>
             <a
-              href="https://hiti.emory.edu"
+              href="https://hitilab.com"
               target="_blank"
               rel="noopener noreferrer"
               className="font-sans text-sm mt-4 block underline underline-offset-2 transition-colors duration-150 hover:text-surface"
               style={{ color: 'rgba(247,245,240,0.70)' }}
             >
-              hiti.emory.edu
+              hitilab.com
             </a>
             <a
               href="https://github.com/Emory-Empathathetic-AI-for-Health-Inst/Multimodal-Multi-scale-Framework-for-Ethical-AI-Model-Development"
@@ -88,8 +88,7 @@ export default function Footer() {
           >
             Supported by NCI U01 Award &middot; The content does not necessarily
             represent official NIH views &middot; &copy; 2026 MEFINDER Project,
-            Emory University HITI Lab &middot; Deployed on GitHub Pages &middot;
-            Open-source on GitHub
+            Emory University HITI Lab
           </p>
         </div>
       </div>
