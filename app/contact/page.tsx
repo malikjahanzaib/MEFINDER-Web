@@ -28,12 +28,12 @@ export default function ContactPage() {
               Atlanta, Georgia
             </p>
             <a
-              href="https://hiti.emory.edu"
+              href="https://hitilab.com"
               target="_blank"
               rel="noopener noreferrer"
               className="font-sans text-sm text-ink underline underline-offset-2 mt-4 block hover:text-navy transition-colors duration-150"
             >
-              hiti.emory.edu
+              hitilab.com
             </a>
           </section>
 
