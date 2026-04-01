@@ -1,0 +1,9 @@
+{
+  "/page": "app/page.js",
+  "/research/page": "app/research/page.js",
+  "/tools/page": "app/tools/page.js",
+  "/use-cases/breast-cancer/page": "app/use-cases/breast-cancer/page.js",
+  "/team/page": "app/team/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/publications/page": "app/publications/page.js"
+}
