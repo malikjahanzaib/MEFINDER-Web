@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 64" width="180" height="64">
+  <rect x="0.5" y="0.5" width="179" height="63" rx="2" fill="none" stroke="#E2DED8" stroke-width="1"/>
+  <text x="90" y="28" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="13" font-weight="400" fill="#1A1814" letter-spacing="3">MAYO</text>
+  <text x="90" y="46" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="10" fill="#4A4640" letter-spacing="2">CLINIC</text>
+</svg>
