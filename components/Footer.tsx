@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { GitHubIcon, ExternalLinkIcon } from '@/components/icons'
 
 const footerLinks = [
   { label: 'Research', href: '/research' },
@@ -63,18 +64,20 @@ export default function Footer() {
               href="https://hitilab.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-sans text-sm mt-4 block underline underline-offset-2 transition-colors duration-150 hover:text-surface"
+              className="font-sans text-sm mt-4 inline-flex items-center gap-1.5 underline underline-offset-2 transition-colors duration-150 hover:text-surface"
               style={{ color: 'rgba(247,245,240,0.70)' }}
             >
               hitilab.com
+              <ExternalLinkIcon className="w-3 h-3" />
             </a>
             <a
               href="https://github.com/Emory-Empathathetic-AI-for-Health-Inst/Multimodal-Multi-scale-Framework-for-Ethical-AI-Model-Development"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-sans text-sm mt-2 block underline underline-offset-2 transition-colors duration-150 hover:text-surface"
+              className="font-sans text-sm mt-3 flex items-center gap-2 transition-colors duration-150 hover:text-surface"
               style={{ color: 'rgba(247,245,240,0.70)' }}
             >
+              <GitHubIcon className="w-4 h-4 flex-shrink-0" />
               GitHub Repository
             </a>
           </div>

@@ -1,3 +1,5 @@
+import { ExternalLinkIcon } from '@/components/icons'
+
 export default function Contact() {
   return (
     <section id="contact" className="py-24 px-8 border-t border-rule">
@@ -31,9 +33,10 @@ export default function Contact() {
             href="https://hitilab.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-sans text-sm text-ink underline underline-offset-2 mt-4 block hover:text-navy transition-colors duration-150"
+            className="font-sans text-sm text-ink inline-flex items-center gap-1.5 underline underline-offset-2 mt-4 hover:text-navy transition-colors duration-150"
           >
             hitilab.com
+            <ExternalLinkIcon className="w-3 h-3" />
           </a>
         </div>
 

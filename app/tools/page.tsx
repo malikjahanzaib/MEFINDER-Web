@@ -2,6 +2,7 @@ import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import PageHeader from '@/components/PageHeader'
 import { tools, ToolCategory } from '@/data/tools'
+import { GitHubIcon } from '@/components/icons'
 
 const categories: ToolCategory[] = [
   'Multimodal Fusion',
@@ -22,11 +23,28 @@ export default function ToolsPage() {
     <main className="bg-surface min-h-screen">
       <Nav />
 
-      <PageHeader
-        label="Tools & Data"
-        heading="Open-source infrastructure for multimodal cancer AI."
-        subtext="All tools developed under the MEFINDER initiative are released with academic open-source licenses and designed for reproducible research."
-      />
+      <div className="pt-36 max-w-5xl mx-auto px-8 border-b border-rule pb-16">
+        <p className="font-sans text-xs uppercase tracking-widest text-ink-light">
+          Tools &amp; Data
+        </p>
+        <div className="flex items-end justify-between gap-8 mt-3">
+          <h1 className="font-serif text-5xl text-ink max-w-2xl leading-tight">
+            Open-source infrastructure for multimodal cancer AI.
+          </h1>
+          <a
+            href="https://github.com/Emory-Empathathetic-AI-for-Health-Inst/Multimodal-Multi-scale-Framework-for-Ethical-AI-Model-Development"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-shrink-0 inline-flex items-center gap-2 border border-ink text-ink px-5 py-2.5 font-sans text-sm tracking-wide hover:bg-ink hover:text-surface transition-colors duration-200 mb-1"
+          >
+            <GitHubIcon className="w-4 h-4" />
+            View on GitHub
+          </a>
+        </div>
+        <p className="font-sans text-base text-ink-light mt-4 max-w-xl leading-relaxed">
+          All tools developed under the MEFINDER initiative are released with academic open-source licenses and designed for reproducible research.
+        </p>
+      </div>
 
       <div className="max-w-5xl mx-auto px-8 py-20">
         {categories.map((category, ci) => {
@@ -91,8 +109,9 @@ export default function ToolsPage() {
                               href={tool.githubUrl}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="font-sans text-xs text-ink underline underline-offset-2 hover:text-navy transition-colors duration-150"
+                              className="font-sans text-xs text-ink inline-flex items-center gap-1.5 underline underline-offset-2 hover:text-navy transition-colors duration-150"
                             >
+                              <GitHubIcon className="w-3.5 h-3.5" />
                               {tool.githubUrl.replace('https://', '')}
                             </a>
                           ) : (
