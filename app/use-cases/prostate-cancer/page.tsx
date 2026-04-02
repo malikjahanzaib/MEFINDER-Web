@@ -1,6 +1,7 @@
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import PageHeader from '@/components/PageHeader'
+import { tools as allTools } from '@/data/tools'
 
 const datasets = [
   {
@@ -35,23 +36,13 @@ const datasets = [
   },
 ]
 
-const tools = [
-  {
-    name: 'Prostate Cancer Lesion Detection (nnU-Net)',
-    description:
-      'nnU-Net-based framework for prostate cancer lesion detection. Developed at Indiana University (Shiradkar Lab). Trained on PI-CAI and Prostate-158 datasets. Model weights available on request from the authors.',
-  },
-  {
-    name: 'PI-QUAL vs MRQy Comparison',
-    description:
-      'Code and analysis for prostate MRI quality assessment. Compares PI-QUAL and MRQy quality metrics using UMAP clustering, V-Net segmentation, and VoxelMorph deformable registration.',
-  },
-  {
-    name: 'Niffler',
-    description:
-      'DICOM framework for machine learning pipelines. Enables real-time and on-demand DICOM retrieval from PACS, metadata extraction, anonymization, and processing workflows. Published in JDI 2021. GitHub: github.com/Emory-HITI/Niffler',
-  },
+const RELEVANT_TOOLS = [
+  'Prostate Cancer Lesion Detection (nnU-Net)',
+  'PI-QUAL vs MRQy Comparison',
+  'Niffler',
 ]
+
+const tools = allTools.filter((t) => RELEVANT_TOOLS.includes(t.name))
 
 export default function ProstateCancerPage() {
   return (
@@ -139,8 +130,9 @@ export default function ProstateCancerPage() {
                 </p>
                 <div>
                   <h3 className="font-serif text-xl text-ink">{tool.name}</h3>
+                  <p className="font-sans text-sm text-ink font-medium mt-1">{tool.description}</p>
                   <p className="font-sans text-sm text-ink-light mt-2 leading-relaxed max-w-2xl">
-                    {tool.description}
+                    {tool.details}
                   </p>
                 </div>
               </div>
