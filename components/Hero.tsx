@@ -34,7 +34,7 @@ export default function Hero() {
         <div className="max-w-4xl mx-auto px-8 py-20 w-full">
           {/* Institution label */}
           <p className="font-sans text-xs uppercase tracking-widest text-ink-light animate-fade-up">
-            NCI U01 Award &middot; Emory University HITI Lab
+            NCI U01 Award &middot; HITI Lab, Emory University
           </p>
 
           {/* Full project name as headline */}
