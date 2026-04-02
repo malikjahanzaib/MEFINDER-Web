@@ -50,10 +50,13 @@ export default function Nav() {
           {/* Wordmark */}
           <Link
             href="/"
-            className="font-serif text-xl text-navy tracking-tight"
+            className="flex flex-col leading-none gap-1"
             aria-label="MEFINDER — home"
           >
-            MEFINDER
+            <span className="font-wordmark text-2xl text-navy tracking-tight leading-none">MEFINDER</span>
+            <span className="hidden lg:block font-sans text-[9px] text-ink-light tracking-wide leading-snug max-w-[220px]">
+              Multimodal Fusion Initiative for Novel<br />Disease Phenotype Discovery &amp; Risk Prediction
+            </span>
           </Link>
 
           {/* Desktop nav links */}

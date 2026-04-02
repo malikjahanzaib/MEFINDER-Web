@@ -5,9 +5,15 @@ import InstitutionLogo from '@/components/InstitutionLogo'
 
 const institutions = [
   {
+    name: 'HITI Lab',
+    slug: 'hiti',
+    role: 'Lead lab — multimodal fusion development, NLP recurrence labeling, data harmonization infrastructure. Department of Radiology and Informatics, Emory University School of Medicine.',
+    datasets: 'EMBED v2 (260,815 patients, ~1M exams), EPIP (~5,000 prostate MRI patients)',
+  },
+  {
     name: 'Emory University (Lead)',
     slug: 'emory',
-    role: 'Project coordination, HITI Lab infrastructure, NLP recurrence labeling, multimodal fusion',
+    role: 'Project coordination, institutional infrastructure, consortium management',
     datasets: 'EMBED v2 (260,815 patients, ~1M exams), EPIP (~5,000 prostate MRI patients)',
   },
   {
@@ -98,11 +104,11 @@ export default function TeamPage() {
               key={inst.name}
               className="grid grid-cols-3 gap-8 border-b border-rule py-6 items-start"
             >
-              <div className="flex flex-col gap-3">
-                <div className="h-14 flex items-center">
-                  <InstitutionLogo name={inst.name} slug={inst.slug} className="max-h-14 w-auto max-w-full object-contain object-left" />
+              <div className="flex flex-col items-center gap-3">
+                <div className="h-14 flex items-center justify-center">
+                  <InstitutionLogo name={inst.name} slug={inst.slug} className="max-h-14 w-auto max-w-full object-contain object-center" />
                 </div>
-                <p className="font-serif text-sm text-ink">{inst.name}</p>
+                <p className="font-serif text-sm text-ink text-center">{inst.name}</p>
               </div>
               <p className="font-sans text-sm text-ink-light leading-relaxed">{inst.role}</p>
               <p className="font-sans text-sm text-ink-light leading-relaxed">{inst.datasets}</p>
