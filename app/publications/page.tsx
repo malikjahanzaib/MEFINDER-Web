@@ -21,15 +21,19 @@ export default function PublicationsPage() {
         {years.map((year) => {
           const yearPubs = publications.filter((p) => p.year === year)
           return (
-            <section key={year} className="mb-16">
-              <p className="font-sans text-xs uppercase tracking-widest text-ink-light mb-8">
+            <section key={year} className="mb-16 relative overflow-hidden">
+              {/* Ghost year numeral */}
+              <div className="absolute -top-6 right-0 font-serif text-[9rem] leading-none text-rule/50 select-none pointer-events-none" aria-hidden="true">
+                {year}
+              </div>
+              <p className="font-sans text-xs uppercase tracking-widest text-ink-light mb-8 relative">
                 {year}
               </p>
               <div className="space-y-0">
                 {yearPubs.map((pub, i) => (
                   <div
                     key={pub.id}
-                    className="border-t border-rule py-10 grid grid-cols-[80px_1fr] gap-8 items-start"
+                    className="border-t border-rule py-10 grid grid-cols-[80px_1fr] gap-8 items-start transition-colors duration-150 hover:bg-rule/30"
                   >
                     {/* Leading numeral */}
                     <p className="font-serif text-6xl text-rule leading-none select-none">

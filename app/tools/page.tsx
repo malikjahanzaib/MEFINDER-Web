@@ -50,17 +50,21 @@ export default function ToolsPage() {
         {categories.map((category, ci) => {
           const categoryTools = tools.filter((t) => t.category === category)
           return (
-            <section key={category} className={ci < categories.length - 1 ? 'mb-20 pb-20 border-b border-rule' : 'mb-20'}>
-              <p className="font-sans text-xs uppercase tracking-widest text-ink-light mb-2">
+            <section key={category} className={`relative overflow-hidden ${ci < categories.length - 1 ? 'mb-20 pb-20 border-b border-rule' : 'mb-20'}`}>
+              {/* Ghost section numeral */}
+              <div className="absolute -top-8 right-0 font-serif text-[11rem] leading-none text-rule/50 select-none pointer-events-none" aria-hidden="true">
+                {String(ci + 1).padStart(2, '0')}
+              </div>
+              <p className="font-sans text-xs uppercase tracking-widest text-ink-light mb-2 relative">
                 {String(ci + 1).padStart(2, '0')}
               </p>
-              <h2 className="font-serif text-3xl text-ink mb-12">
+              <h2 className="font-serif text-3xl text-ink mb-12 relative">
                 {categoryLabels[category]}
               </h2>
 
               <div className="space-y-0">
                 {categoryTools.map((tool) => (
-                  <div key={tool.name} className="border-t border-rule py-10">
+                  <div key={tool.name} className="border-t border-rule py-10 transition-colors duration-150 hover:bg-rule/30">
                     <div className="lg:grid lg:grid-cols-3 lg:gap-16">
                       {/* Left: name + venue + badge */}
                       <div>

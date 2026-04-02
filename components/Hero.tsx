@@ -1,36 +1,24 @@
 import Link from 'next/link'
+import HeroConstellation from '@/components/HeroConstellation'
 
 const stats = [
-  {
-    number: '260,815+',
-    label: 'Patients in EMBED v2',
-    sublabel: 'Breast cancer cohort',
-  },
-  {
-    number: '~1 Million',
-    label: 'Imaging Exams',
-    sublabel: 'Cross-modality',
-  },
-  {
-    number: '5',
-    label: 'Partner Institutions',
-    sublabel: 'Multi-site consortium',
-  },
-  {
-    number: '13+',
-    label: 'Open-Source Tools',
-    sublabel: 'Code & models released',
-  },
+  { number: '260,815+', label: 'Patients in EMBED v2', sublabel: 'Breast cancer cohort' },
+  { number: '~1 Million', label: 'Imaging Exams', sublabel: 'Cross-modality' },
+  { number: '5', label: 'Partner Institutions', sublabel: 'Multi-site consortium' },
+  { number: '13+', label: 'Open-Source Tools', sublabel: 'Code & models released' },
 ]
 
 export default function Hero() {
   return (
     <section
       id="hero"
-      className="min-h-screen flex flex-col justify-between bg-surface pt-24"
+      className="min-h-screen flex flex-col justify-between bg-surface pt-24 relative"
     >
+      {/* Background constellation */}
+      <HeroConstellation />
+
       {/* Top spacer */}
-      <div className="flex-1 flex items-center">
+      <div className="flex-1 flex items-center relative">
         <div className="max-w-4xl mx-auto px-8 py-20 w-full">
           {/* Institution label */}
           <p className="font-sans text-xs uppercase tracking-widest text-ink-light animate-fade-up">
@@ -69,18 +57,14 @@ export default function Hero() {
       </div>
 
       {/* Bottom stats row */}
-      <div className="border-t border-rule">
+      <div className="border-t border-rule relative">
         <div className="max-w-4xl mx-auto px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 divide-y divide-rule md:divide-y-0 divide-x-0 md:divide-x md:divide-rule">
             {stats.map((stat, i) => (
               <div key={i} className="py-8 px-6 first:pl-0 last:pr-0">
                 <p className="font-serif text-4xl text-ink">{stat.number}</p>
-                <p className="font-sans text-sm font-medium text-ink mt-2">
-                  {stat.label}
-                </p>
-                <p className="font-sans text-xs text-ink-light mt-0.5">
-                  {stat.sublabel}
-                </p>
+                <p className="font-sans text-sm font-medium text-ink mt-2">{stat.label}</p>
+                <p className="font-sans text-xs text-ink-light mt-0.5">{stat.sublabel}</p>
               </div>
             ))}
           </div>
