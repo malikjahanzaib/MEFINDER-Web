@@ -30,7 +30,7 @@ export default function ResearchOverview() {
             <p className="font-sans text-xs uppercase tracking-widest text-ink-light">
               What is MEFINDER?
             </p>
-            <blockquote className="font-serif text-2xl text-ink mt-6 leading-snug">
+            <blockquote className="font-serif text-2xl text-ink mt-6 leading-snug border-l-2 border-amber pl-5">
               &ldquo;Patients with identical cancer diagnoses experience vastly
               different outcomes.&rdquo;
             </blockquote>
