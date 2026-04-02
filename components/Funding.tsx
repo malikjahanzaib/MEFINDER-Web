@@ -1,9 +1,11 @@
+import InstitutionLogo from '@/components/InstitutionLogo'
+
 const partnerInstitutions = [
-  'Emory University',
-  'Indiana University',
-  'Stanford University',
-  'Mayo Clinic',
-  'VA',
+  { name: 'Emory University', slug: 'emory' },
+  { name: 'Indiana University', slug: 'indiana' },
+  { name: 'Stanford University', slug: 'stanford' },
+  { name: 'Mayo Clinic', slug: 'mayo' },
+  { name: 'Veterans Affairs', slug: 'va' },
 ]
 
 export default function Funding() {
@@ -22,14 +24,16 @@ export default function Funding() {
           University
         </p>
 
-        {/* Institution lockup */}
-        <div className="mt-16 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-0">
+        {/* Institution logo lockup */}
+        <div className="mt-16 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8">
           {partnerInstitutions.map((inst) => (
-            <div
-              key={inst}
-              className="border-t-2 border-amber pt-4 px-4 first:pl-0 last:pr-0"
-            >
-              <p className="font-serif text-base text-ink">{inst}</p>
+            <div key={inst.slug} className="flex flex-col items-center gap-3">
+              <div className="h-20 flex items-center justify-center w-full px-2">
+                <InstitutionLogo name={inst.name} slug={inst.slug} />
+              </div>
+              <p className="font-sans text-xs text-ink-light text-center leading-snug tracking-wide">
+                {inst.name}
+              </p>
             </div>
           ))}
         </div>

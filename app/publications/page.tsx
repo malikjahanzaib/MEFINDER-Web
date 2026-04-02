@@ -33,7 +33,7 @@ export default function PublicationsPage() {
                   >
                     {/* Leading numeral */}
                     <p className="font-serif text-6xl text-rule leading-none select-none">
-                      {String(pub.id).padStart(2, '0')}
+                      {String(i + 1).padStart(2, '0')}
                     </p>
 
                     {/* Content */}

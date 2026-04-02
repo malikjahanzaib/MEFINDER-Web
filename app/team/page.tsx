@@ -1,30 +1,36 @@
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import PageHeader from '@/components/PageHeader'
+import InstitutionLogo from '@/components/InstitutionLogo'
 
 const institutions = [
   {
     name: 'Emory University (Lead)',
+    slug: 'emory',
     role: 'Project coordination, HITI Lab infrastructure, NLP recurrence labeling, multimodal fusion',
     datasets: 'EMBED v2 (260,815 patients, ~1M exams), EPIP (~5,000 prostate MRI patients)',
   },
   {
     name: 'Indiana University',
+    slug: 'indiana',
     role: 'Pathomic feature extraction (APIC), treatment benefit prediction, prostate aging research',
     datasets: 'CHAARTED, STAMPEDE clinical trials',
   },
   {
     name: 'Stanford University',
+    slug: 'stanford',
     role: 'NLP toolkit validation, breast cancer data harmonization, cancer registry linkage (CA)',
     datasets: 'Stanford breast and prostate cohorts, CA registry',
   },
   {
     name: 'Mayo Clinic',
+    slug: 'mayo',
     role: 'Long-term follow-up, biobank infrastructure, clinical report parsing',
     datasets: 'Mayo Clinic Biobank (75,000+ patients, 10–15 years follow-up)',
   },
   {
     name: 'VA',
+    slug: 'va',
     role: 'Prostate MRI data, pathology slide digitization',
     datasets: '387 biparametric MRI patients (expanding)',
   },
@@ -90,9 +96,14 @@ export default function TeamPage() {
           {institutions.map((inst) => (
             <div
               key={inst.name}
-              className="grid grid-cols-3 gap-8 border-b border-rule py-6"
+              className="grid grid-cols-3 gap-8 border-b border-rule py-6 items-start"
             >
-              <p className="font-serif text-base text-ink">{inst.name}</p>
+              <div className="flex flex-col gap-3">
+                <div className="h-14 flex items-center">
+                  <InstitutionLogo name={inst.name} slug={inst.slug} className="max-h-14 w-auto max-w-full object-contain object-left" />
+                </div>
+                <p className="font-serif text-sm text-ink">{inst.name}</p>
+              </div>
               <p className="font-sans text-sm text-ink-light leading-relaxed">{inst.role}</p>
               <p className="font-sans text-sm text-ink-light leading-relaxed">{inst.datasets}</p>
             </div>
