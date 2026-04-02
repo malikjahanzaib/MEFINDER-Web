@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 80" width="480" height="80">
+  <!-- Wordmark -->
+  <text
+    x="0" y="36"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="36"
+    font-weight="400"
+    fill="#012169"
+    letter-spacing="2"
+  >MEFINDER</text>
+
+  <!-- Rule -->
+  <line x1="0" y1="46" x2="478" y2="46" stroke="#E2DED8" stroke-width="0.75"/>
+
+  <!-- Full name line 1 -->
+  <text
+    x="0" y="60"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="10"
+    fill="#4A4640"
+    letter-spacing="0.5"
+  >Multimodal Fusion Initiative for Novel Disease Phenotype Discovery</text>
+
+  <!-- Full name line 2 -->
+  <text
+    x="0" y="74"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="10"
+    fill="#4A4640"
+    letter-spacing="0.5"
+  >and Population-Specific Risk Prediction</text>
+</svg>

@@ -32,26 +32,32 @@ export default function Hero() {
       {/* Top spacer */}
       <div className="flex-1 flex items-center">
         <div className="max-w-4xl mx-auto px-8 py-20 w-full">
-          {/* Label */}
+          {/* Institution label */}
           <p className="font-sans text-xs uppercase tracking-widest text-ink-light animate-fade-up">
             NCI U01 Award &middot; Emory University HITI Lab
           </p>
 
-          {/* Headline */}
-          <h1 className="font-serif text-5xl md:text-7xl text-ink leading-tight max-w-3xl mt-6 animate-fade-up-1">
-            Discovering what no single data stream can reveal.
+          {/* Full project name as headline */}
+          <h1 className="font-serif text-4xl md:text-5xl text-ink leading-tight max-w-3xl mt-6 animate-fade-up-1">
+            Multimodal Fusion Initiative for Novel Disease Phenotype Discovery
+            and Population-Specific Risk Prediction
           </h1>
 
+          {/* Tagline */}
+          <p className="font-sans text-lg md:text-xl text-ink-light max-w-2xl mt-8 leading-relaxed animate-fade-up-2">
+            Discovering what no single data stream can reveal.
+          </p>
+
           {/* Subtext */}
-          <p className="font-sans text-lg text-ink-light max-w-2xl mt-6 leading-relaxed animate-fade-up-2">
-            MEFINDER integrates radiology, digital pathology, genomics, and
-            electronic health records to uncover novel cancer phenotypes and
-            deliver population-specific risk predictions for breast and prostate
-            cancer.
+          <p className="font-sans text-base text-ink-light max-w-2xl mt-4 leading-relaxed animate-fade-up-3">
+            We integrate radiology, digital pathology, electronic health records,
+            and social determinants of health to uncover novel cancer phenotypes
+            and deliver population-specific risk predictions for breast and
+            prostate cancer.
           </p>
 
           {/* CTA */}
-          <div className="mt-10 animate-fade-up-3">
+          <div className="mt-10 animate-fade-up-4">
             <Link
               href="/research"
               className="inline-block border border-ink text-ink px-8 py-3 font-sans text-sm tracking-wide hover:bg-ink hover:text-surface transition-colors duration-200"
