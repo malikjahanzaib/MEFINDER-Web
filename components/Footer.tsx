@@ -17,7 +17,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Col 1 — Wordmark & tagline */}
           <div>
-            <p className="font-serif text-xl text-surface">MEFINDER</p>
+            <p className="font-wordmark text-2xl text-surface tracking-tight">MEFINDER</p>
             <p className="font-sans text-xs mt-2 leading-relaxed" style={{ color: 'rgba(247,245,240,0.60)' }}>
               Multimodal Fusion Initiative for Novel Disease Phenotype Discovery
               and Population-Specific Risk Prediction

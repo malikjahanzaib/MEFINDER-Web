@@ -17,7 +17,7 @@ const instrumentSans = Instrument_Sans({
 })
 
 const plusJakartaSans = Plus_Jakarta_Sans({
-  weight: '300',
+  weight: '400',
   subsets: ['latin'],
   variable: '--font-wordmark',
   display: 'swap',
