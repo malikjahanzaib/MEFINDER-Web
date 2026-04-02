@@ -1,3 +1,4 @@
+import { ExternalLinkIcon } from '@/components/icons'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import PageHeader from '@/components/PageHeader'
@@ -31,9 +32,10 @@ export default function ContactPage() {
               href="https://hitilab.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-sans text-sm text-ink underline underline-offset-2 mt-4 block hover:text-navy transition-colors duration-150"
+              className="font-sans text-sm text-ink inline-flex items-center gap-1.5 underline underline-offset-2 mt-4 hover:text-navy transition-colors duration-150"
             >
               hitilab.com
+              <ExternalLinkIcon className="w-3 h-3" />
             </a>
           </section>
 
