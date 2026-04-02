@@ -1,6 +1,7 @@
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import PageHeader from '@/components/PageHeader'
+import { tools as allTools } from '@/data/tools'
 
 const dataModalities = [
   { label: 'Mammography', detail: 'Full-field digital mammography (FFDM) and digital breast tomosynthesis (DBT)' },
@@ -10,38 +11,16 @@ const dataModalities = [
   { label: 'EHR', detail: 'Structured electronic health records including ICD-10 codes, medications, and visit history' },
 ]
 
-const tools = [
-  {
-    name: 'VLM for Mammography',
-    description:
-      'Knowledge-grounded adaptation strategy for vision-language models. Validated zero-shot and few-shot on UW Madison datasets and externally on Mayo Clinic.',
-  },
-  {
-    name: 'BreastRecurrence_Transformer',
-    description:
-      'Transformer-based NLP for identifying breast cancer recurrence occurrence and timing from EMRs. Model weights available via Google Drive.',
-  },
-  {
-    name: 'Breast Cancer Treatment Extraction',
-    description:
-      'Hybrid UMLS parser + fine-tuned LLM (GPT-2/BioGPT/LLaMA) for extracting longitudinal treatment timelines from free-text clinical notes.',
-  },
-  {
-    name: 'PCO Extraction',
-    description:
-      'Fine-tuning framework for LLMs to extract patient-centered outcomes including fatigue, depression, anxiety, nausea, and lymphedema from breast cancer clinical notes.',
-  },
-  {
-    name: 'Recurrence Site Extraction (BioLinkBERT)',
-    description:
-      'Fine-tuned BioLinkBERT model for extracting sites of distant recurrence from clinical, radiology, and pathology notes.',
-  },
-  {
-    name: 'Mammogram Implant Identifier',
-    description:
-      'ResNet18 CNN trained on 6,250 mammograms. Identifies breast implants without relying on DICOM tags. AUROC 0.998, sensitivity 0.966, specificity 1.000.',
-  },
+const RELEVANT_TOOLS = [
+  'VLM for Mammography',
+  'BreastRecurrence_Transformer',
+  'Breast Cancer Treatment Extraction',
+  'PCO Extraction',
+  'Recurrence Site Extraction (BioLinkBERT)',
+  'Mammogram Implant Identifier',
 ]
+
+const tools = allTools.filter((t) => RELEVANT_TOOLS.includes(t.name))
 
 export default function BreastCancerPage() {
   return (
@@ -164,8 +143,9 @@ export default function BreastCancerPage() {
                 </p>
                 <div>
                   <h3 className="font-serif text-xl text-ink">{tool.name}</h3>
+                  <p className="font-sans text-sm text-ink font-medium mt-1">{tool.description}</p>
                   <p className="font-sans text-sm text-ink-light mt-2 leading-relaxed max-w-2xl">
-                    {tool.description}
+                    {tool.details}
                   </p>
                 </div>
               </div>
