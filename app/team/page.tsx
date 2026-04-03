@@ -42,35 +42,55 @@ const institutions = [
   },
 ]
 
-const researchers = [
+type TeamMember = { name: string; role: string; affiliation?: string }
+
+const leadership: TeamMember[] = [
   {
     name: 'Dr. Judy Wawira Gichoya',
-    role: 'Principal Investigator, HITI Lab, Department of Radiology and Informatics, Emory University School of Medicine',
+    role: 'Principal Investigator',
+    affiliation: 'Associate Professor, Department of Radiology and Imaging Sciences, Emory University',
   },
   {
-    name: 'Imon Banerjee',
-    role: 'Indiana University — co-investigator; co-author on MM-STGNN and VLM for Mammography papers',
+    name: 'Dr. Hari Trivedi',
+    role: 'Co-Investigator',
+    affiliation: 'Associate Professor, Emory University',
   },
   {
-    name: 'Amara Tariq',
-    role: 'Co-author on MM-STGNN and VLM for Mammography papers',
+    name: 'Dr. Imon Banerjee, Ph.D.',
+    role: 'Co-Investigator',
+    affiliation: 'Associate Professor, Mayo Clinic',
   },
   {
-    name: 'Pradeeban Kathiravelu',
-    role: 'Emory HITI Lab — lead developer of Niffler DICOM framework',
+    name: 'Dr. Anant Madabhushi',
+    role: 'Professor',
+    affiliation: 'Emory University',
   },
-  {
-    name: 'Hari Trivedi',
-    role: 'Emory University — co-author on Niffler',
-  },
-  {
-    name: 'Nabile Safdar',
-    role: 'Co-author on Niffler DICOM framework',
-  },
-  {
-    name: 'Aisha Urooj Khan',
-    role: 'Lead author on VLM for Mammography (MICCAI 2024)',
-  },
+]
+
+const coreTeam: TeamMember[] = [
+  { name: 'Amara Tariq, Ph.D.',        role: 'Collaborator' },
+  { name: 'Beatrice Brown-Mulry',      role: 'Data Analyst, Sr',                 affiliation: 'Emory University HITI Lab' },
+  { name: 'Rohan Satya Isaac',         role: 'Data Analyst, Sr',                 affiliation: 'Emory University' },
+  { name: 'Jahanzaib Malik',           role: 'Systems Software Engineer',        affiliation: 'Emory University HITI Lab' },
+  { name: 'Drew Williamson',           role: 'Assistant Professor',              affiliation: 'Emory University' },
+  { name: 'Ujjwal Raghunandan Baid',   role: 'Dir, Research Operations (SOM)',   affiliation: 'Emory University' },
+  { name: 'Kutsev Bengisu Ozyoruk',    role: 'Scientist, Asst (AR)',             affiliation: 'Emory University' },
+  { name: 'Tilak Bahadur Pathak',      role: 'Scientist (AR) SOM',              affiliation: 'Emory University' },
+  { name: 'Barry C. Prine',            role: 'Sponsored Research Analyst, Lead', affiliation: 'Emory University' },
+  { name: 'Bolin Song',                role: 'Post Doctoral Fellow',             affiliation: 'Emory University' },
+  { name: 'Naoto Tokuyama',            role: 'Post Doctoral Fellow',             affiliation: 'Emory University' },
+  { name: 'Krunal Balvantbhai Pandav', role: 'Visiting Fellow',                  affiliation: 'Emory University' },
+  { name: 'Daniel L. Rubin',           role: 'Collaborator',                     affiliation: 'Stanford University' },
+  { name: 'Mirabela Rusu',             role: 'Collaborator',                     affiliation: 'Stanford University' },
+  { name: 'Rakesh Shiradkar',          role: 'Collaborator' },
+  { name: 'Sumedh Ajit Sonawane',      role: 'Collaborator' },
+  { name: 'Yamlak Asrat Bogale',       role: 'Collaborator' },
+  { name: 'Dakota Kershaw',            role: 'Research Admin, Post Award III',   affiliation: 'Emory University' },
+  { name: 'Jay Sonuga',                role: 'Clinical Research Coordinator III', affiliation: 'Emory University' },
+  { name: 'Maryam Sakinah Yasin',      role: 'Clinical Research Coordinator I',  affiliation: 'Emory University' },
+  { name: 'Biniam Garomsa',            role: 'Doctoral Student',                 affiliation: 'Emory University' },
+  { name: 'Loyani Loyani',             role: 'Doctoral Student',                 affiliation: 'Emory University' },
+  { name: 'Sebastian Medina Carrillo', role: 'Graduate Student',                 affiliation: 'TU BME' },
 ]
 
 export default function TeamPage() {
@@ -116,29 +136,48 @@ export default function TeamPage() {
           ))}
         </section>
 
-        {/* Contributing Researchers */}
+        {/* Leadership */}
         <section className="border-b border-rule pb-16 mb-16">
           <p className="font-sans text-xs uppercase tracking-widest text-ink-light mb-8">
-            Contributing Researchers
+            Leadership
           </p>
           <div className="space-y-0">
-            {researchers.map((researcher) => (
-              <div key={researcher.name} className="border-t border-rule py-6 grid grid-cols-[240px_1fr] gap-8 items-start">
-                <p className="font-serif text-base text-ink">{researcher.name}</p>
-                <p className="font-sans text-sm text-ink-light leading-relaxed">{researcher.role}</p>
+            {leadership.map((member) => (
+              <div key={member.name} className="border-t border-rule py-6 grid grid-cols-[240px_1fr] gap-8 items-start transition-colors duration-150 hover:bg-rule/30">
+                <p className="font-serif text-base text-ink">{member.name}</p>
+                <div>
+                  <p className="font-sans text-sm text-ink leading-relaxed">{member.role}</p>
+                  {member.affiliation && (
+                    <p className="font-sans text-xs text-ink-light mt-0.5">{member.affiliation}</p>
+                  )}
+                </div>
               </div>
             ))}
             <div className="border-t border-rule"></div>
           </div>
         </section>
 
-        {/* Forthcoming note */}
-        <section>
-          <p className="font-sans text-sm text-ink-light leading-relaxed max-w-xl">
-            Full team information including co-investigator bios and headshots will be available
-            at launch.
+        {/* Core Team */}
+        <section className="border-b border-rule pb-16 mb-16">
+          <p className="font-sans text-xs uppercase tracking-widest text-ink-light mb-8">
+            Core Team
           </p>
+          <div className="space-y-0">
+            {coreTeam.map((member) => (
+              <div key={member.name} className="border-t border-rule py-6 grid grid-cols-[240px_1fr] gap-8 items-start transition-colors duration-150 hover:bg-rule/30">
+                <p className="font-serif text-base text-ink">{member.name}</p>
+                <div>
+                  <p className="font-sans text-sm text-ink leading-relaxed">{member.role}</p>
+                  {member.affiliation && (
+                    <p className="font-sans text-xs text-ink-light mt-0.5">{member.affiliation}</p>
+                  )}
+                </div>
+              </div>
+            ))}
+            <div className="border-t border-rule"></div>
+          </div>
         </section>
+
 
       </div>
 
