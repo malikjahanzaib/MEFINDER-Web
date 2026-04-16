@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import HeroConstellation from '@/components/HeroConstellation'
+import { GitHubIcon } from '@/components/icons'
 
 const stats = [
   { number: '260,815+', label: 'Patients in EMBED v2', sublabel: 'Breast cancer cohort' },
@@ -22,7 +23,7 @@ export default function Hero() {
         <div className="max-w-4xl mx-auto px-8 py-20 w-full">
           {/* Institution label */}
           <p className="font-sans text-xs uppercase tracking-widest text-ink-light animate-fade-up">
-            NCI U01 Award &middot; HITI Lab, Emory University
+            NIH Other Transaction Award &middot; HITI Lab, Emory University
           </p>
 
           {/* Full project name as headline */}
@@ -33,25 +34,40 @@ export default function Hero() {
 
           {/* Tagline */}
           <p className="font-sans text-lg md:text-xl text-ink-light max-w-2xl mt-8 leading-relaxed animate-fade-up-2">
-            Discovering what no single data stream can reveal.
+            A shared, reusable toolbox helping clinicians make cancer treatment
+            decisions using radiology and pathology images and clinical records
+            that the hospital already has.
           </p>
 
           {/* Subtext */}
           <p className="font-sans text-base text-ink-light max-w-2xl mt-4 leading-relaxed animate-fade-up-3">
-            We integrate radiology, digital pathology, electronic health records,
-            and social determinants of health to uncover novel cancer phenotypes
-            and deliver population-specific risk predictions for breast and
-            prostate cancer.
+            MEFINDER tests a unifying hypothesis: if the tooling is sound, every
+            architecture should classify the same patient in the same direction —
+            whether the model uses ROIs or whole images, two modalities or five,
+            deep learning or graph neural networks, and whether the target is
+            chemotherapy benefit, treatment response, or disease recurrence. We
+            demonstrate this framework scales across clinical use cases and
+            institutional boundaries, delivering consistent patient-level
+            predictions regardless of site, cohort, or prediction task.
           </p>
 
-          {/* CTA */}
-          <div className="mt-10 animate-fade-up-4">
+          {/* CTAs */}
+          <div className="mt-10 flex flex-wrap items-center gap-4 animate-fade-up-4">
             <Link
               href="/research"
               className="inline-block border border-ink text-ink px-8 py-3 font-sans text-sm tracking-wide hover:bg-ink hover:text-surface transition-colors duration-200"
             >
               Explore Our Research
             </Link>
+            <a
+              href="https://github.com/Emory-Empathathetic-AI-for-Health-Inst/Multimodal-Multi-scale-Framework-for-Ethical-AI-Model-Development"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 border border-ink/30 text-ink px-8 py-3 font-sans text-sm tracking-wide hover:border-ink hover:bg-ink hover:text-surface transition-colors duration-200"
+            >
+              <GitHubIcon className="w-4 h-4" />
+              View on GitHub
+            </a>
           </div>
         </div>
       </div>

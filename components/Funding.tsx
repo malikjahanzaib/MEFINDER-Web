@@ -18,11 +18,11 @@ export default function Funding() {
           Funding &amp; Institutional Support
         </p>
         <h2 className="font-serif text-3xl text-ink text-center mt-3">
-          Supported by the National Cancer Institute
+          Supported by the National Institutes of Health
         </h2>
         <p className="font-sans text-sm text-ink-light text-center mt-4">
-          NCI U01 Award &middot; Principal Investigator: Dr. Judy Gichoya, Emory
-          University
+          NIH Other Transactions (OT) Award OT2OD038065 &middot; Principal
+          Investigator: Dr. Judy Gichoya, Emory University
         </p>
 
         {/* Institution logo lockup */}
@@ -41,11 +41,10 @@ export default function Funding() {
 
         {/* NIH acknowledgment footnote */}
         <p className="font-sans text-xs text-ink-light text-center mt-16 max-w-2xl mx-auto leading-relaxed">
-          This research is supported by the National Cancer Institute (NCI) of
-          the National Institutes of Health under Award Number U01CA[Award
-          Number]. The content is solely the responsibility of the authors and
-          does not necessarily represent the official views of the National
-          Institutes of Health.
+          This research is supported by the National Institutes of Health
+          under Other Transactions Award Number OT2OD038065. The content is
+          solely the responsibility of the authors and does not necessarily
+          represent the official views of the National Institutes of Health.
         </p>
       </div>
     </section>

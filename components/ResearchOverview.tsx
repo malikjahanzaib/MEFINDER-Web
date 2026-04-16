@@ -41,7 +41,7 @@ export default function ResearchOverview() {
             <p className="font-sans text-base text-ink leading-relaxed">
               MEFINDER &mdash; Multimodal Fusion Initiative for Novel Disease
               Phenotype Discovery and Population-Specific Risk Prediction &mdash;
-              is an NCI U01-funded research initiative led by Dr. Judy Gichoya
+              is an NIH-funded research initiative led by Dr. Judy Gichoya
               at Emory University&rsquo;s HITI Lab. The project develops
               open-source computational frameworks that fuse medical imaging,
               digital pathology, clinical records, and social determinants of
