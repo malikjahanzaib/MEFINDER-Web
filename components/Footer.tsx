@@ -24,7 +24,7 @@ export default function Footer() {
               and Population-Specific Risk Prediction
             </p>
             <p className="font-sans text-xs mt-4 uppercase tracking-widest" style={{ color: 'rgba(247,245,240,0.40)' }}>
-              NCI U01 Award
+              NIH OT Award
             </p>
           </div>
 
@@ -89,8 +89,8 @@ export default function Footer() {
             className="font-sans text-xs text-center leading-relaxed"
             style={{ color: 'rgba(247,245,240,0.50)' }}
           >
-            Supported by NCI U01 Award &middot; The content does not necessarily
-            represent official NIH views &middot; &copy; 2026 MEFINDER Project,
+            Supported by NIH OT Award OT2OD038065 &middot; The content does not
+            necessarily represent official NIH views &middot; &copy; 2026 MEFINDER Project,
             Emory University HITI Lab
           </p>
         </div>

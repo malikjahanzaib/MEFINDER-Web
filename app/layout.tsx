@@ -26,11 +26,11 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   title: 'MEFINDER — Multimodal Cancer AI Research',
   description:
-    'MEFINDER is an NCI U01-funded multimodal cancer AI research initiative at Emory University\'s HITI Lab, integrating radiology, digital pathology, genomics, and EHR data to discover novel cancer phenotypes and deliver population-specific risk predictions for breast and prostate cancer.',
+    'MEFINDER is an NIH-funded multimodal cancer AI research initiative at Emory University\'s HITI Lab, integrating radiology, digital pathology, genomics, and EHR data to discover novel cancer phenotypes and deliver population-specific risk predictions for breast and prostate cancer.',
   openGraph: {
     title: 'MEFINDER — Multimodal Cancer AI Research',
     description:
-      'NCI U01-funded initiative fusing radiology, pathology, genomics, and EHR data to uncover novel cancer phenotypes at Emory University HITI Lab.',
+      'NIH-funded initiative fusing radiology, pathology, genomics, and EHR data to uncover novel cancer phenotypes at Emory University HITI Lab.',
     type: 'website',
   },
 }
